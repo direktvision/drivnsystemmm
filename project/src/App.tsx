@@ -73,76 +73,78 @@ function App() {
           </nav>
         </div>
       </header>
+{/* Hero Section with Video */}
+<section className="relative px-6 py-12 lg:py-20">
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-12">
+      <h2 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+        Stop <span className="text-blue-400">Struggling</span> to Scale Your Agency
+      </h2>
+      <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+        Transform your SMMA into a predictable revenue machine with our proven
+        systemization framework that's helped 10+ agencies break through growth barriers
+      </p>
+    </div>
 
-      {/* Hero Section with Video */}
-      <section className="relative px-6 py-12 lg:py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Stop <span className="text-blue-400">Struggling</span> to Scale Your Agency
-            </h2>
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your SMMA into a predictable revenue machine with our proven systemization framework that's helped 10+ agencies break through growth barriers
-            </p>
-          </div>
+    {/* Video Section */}
+    <div className="relative max-w-5xl mx-auto mb-12">
+      <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl">
+        <div className="aspect-video bg-gradient-to-r from-slate-900/80 to-gray-900/80 flex items-center justify-center">
+          {!isVideoPlaying ? (
+            <div className="text-center">
+              <button
+                onClick={() => setIsVideoPlaying(true)}
+                className="group relative inline-flex items-center justify-center w-24 h-24 bg-blue-600 hover:bg-blue-700 rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg"
+              >
+                <Play className="w-8 h-8 text-white ml-1" fill="white" />
+                <div className="absolute inset-0 rounded-full bg-blue-400 animate-ping opacity-25"></div>
+              </button>
+              <p className="text-white text-lg mt-6">
+                How We Systemized Growth for 10+ Agencies
+              </p>
+              <p className="text-gray-400 text-sm mt-2">
+                ⏱ 8 minutes • Game-changing insights
+              </p>
+            </div>
+          ) : (
+            <div className="w-full h-full relative">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/K7uYlaAjlQ4?autoplay=1"
+                title="YouTube video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+              <button
+                onClick={() => setIsVideoPlaying(false)}
+                className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded hover:bg-black/70"
+              >
+                ← Back
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
 
-        {/* Video Section */}
-<div className="relative max-w-5xl mx-auto mb-12">
-  <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl">
-    <div className="aspect-video bg-gradient-to-r from-slate-900/80 to-gray-900/80 flex items-center justify-center">
-      {!isVideoPlaying ? (
-        <div className="text-center">
-          <button
-            onClick={() => setIsVideoPlaying(true)}
-            className="group relative inline-flex items-center justify-center w-24 h-24 bg-blue-600 hover:bg-blue-700 rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg"
-          >
-            <Play className="w-8 h-8 text-white ml-1" fill="white" />
-            <div className="absolute inset-0 rounded-full bg-blue-400 animate-ping opacity-25"></div>
-          </button>
-          <p className="text-white text-lg mt-6">
-            How We Systemized Growth for 10+ Agencies
-          </p>
-          <p className="text-gray-400 text-sm mt-2">
-            ⏱ 8 minutes • Game-changing insights
-          </p>
-        </div>
-      ) : (
-        <div className="w-full h-full relative">
-          <iframe
-            className="w-full h-full"
-            src="https://www.youtube.com/embed/K7uYlaAjlQ4?autoplay=1"
-            title="YouTube video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-          <button
-            onClick={() => setIsVideoPlaying(false)}
-            className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded hover:bg-black/70"
-          >
-            ← Back
-          </button>
-        </div>
-      )}
+    {/* Video Stats */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      <div className="text-center bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+        <div className="text-3xl font-bold text-blue-400 mb-2">10+</div>
+        <div className="text-white">Agencies Scaled</div>
+      </div>
+      <div className="text-center bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+        <div className="text-3xl font-bold text-green-400 mb-2">$10K+</div>
+        <div className="text-white">Revenue Generated</div>
+      </div>
+      <div className="text-center bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+        <div className="text-3xl font-bold text-purple-400 mb-2">100%</div>
+        <div className="text-white">Success Rate</div>
+      </div>
     </div>
   </div>
-</div>
-            {/* Video Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-              <div className="text-center bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <div className="text-3xl font-bold text-blue-400 mb-2">10+</div>
-                <div className="text-white">Agencies Scaled</div>
-              </div>
-              <div className="text-center bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <div className="text-3xl font-bold text-green-400 mb-2">$10K+</div>
-                <div className="text-white">Revenue Generated</div>
-              </div>
-              <div className="text-center bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <div className="text-3xl font-bold text-purple-400 mb-2">100%</div>
-                <div className="text-white">Success Rate</div>
-              </div>
-            </div>
-          </div>
+</section>
 
        {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
