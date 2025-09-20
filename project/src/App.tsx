@@ -144,13 +144,14 @@ function App() {
             </div>
           </div>
 
-          {/* CTA Buttons */}
+       {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
               Get Your Growth System Now
-      
+            </button>
           </div>
         </div>
+      </section> 
       </section>
 
       {/* Testimonials */}
