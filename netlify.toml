@@ -1,12 +1,16 @@
 [build]
+  # Your app lives in the "project" subfolder
   base = "project"
-  command = "npm ci && npm run build"
+  command = "npm install --no-audit --no-fund && npm run build"
   publish = "dist"
 
 [build.environment]
-  NODE_VERSION = "20"
+  # Pin Node so Netlify matches local; 20.x is fine for Vite 5
+  NODE_VERSION = "20.12.2"
+  # If peer-deps get spicy, uncomment this:
+  # NPM_FLAGS = "--legacy-peer-deps"
 
-# SPA fallback (you also have dist/_redirects, but belt + suspenders)
+# Single Page App fallback
 [[redirects]]
   from = "/*"
   to = "/index.html"
