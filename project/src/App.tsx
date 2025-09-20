@@ -153,8 +153,7 @@ function App() {
             </button>
           </div>
         </div>
-      </section> 
-      </section>
+  
 
       {/* Testimonials */}
       <section id="results" className="px-6 py-16 bg-black/50">
